@@ -1,8 +1,8 @@
-package testdigi.test.component;
+package org.example.digihello.test.component;
 
 @org.springframework.stereotype.Component
 public class Component {
     public Component (){
-        System.out.println("Constructeur Compoenent");
+        System.out.println("Constructeur Component");
     }
 }
