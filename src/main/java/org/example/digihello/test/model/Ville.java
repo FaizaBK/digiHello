@@ -1,4 +1,4 @@
-package org.example.digihello.villes;
+package org.example.digihello.test.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -13,18 +13,12 @@ public class Ville {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String nom;
     private int nbHabitants;
+    private String codeDepartement; // Nouveau champ
 
     // Constructeur sans paramètre
     public Ville() {
-    }
-
-    // Constructeur avec paramètres
-    public Ville(String nom, int nbHabitants) {
-        this.nom = nom;
-        this.nbHabitants = nbHabitants;
     }
 
     // Getters et setters
@@ -50,5 +44,13 @@ public class Ville {
 
     public void setNbHabitants(int nbHabitants) {
         this.nbHabitants = nbHabitants;
+    }
+
+    public String getCodeDepartement() {
+        return codeDepartement;
+    }
+
+    public void setCodeDepartement(String codeDepartement) {
+        this.codeDepartement = codeDepartement;
     }
 }
