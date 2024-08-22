@@ -1,18 +1,33 @@
 package org.example.digihello.villes;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+
+@Entity
 public class Ville {
-    private int id; // Nouvel attribut id
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String nom;
     private int nbHabitants;
 
-    // Constructeur
-    public Ville(int id, String nom, int nbHabitants) {
-        this.id = id;
+    // Constructeur sans paramètre
+    public Ville() {
+    }
+
+    // Constructeur avec paramètres
+    public Ville(String nom, int nbHabitants) {
         this.nom = nom;
         this.nbHabitants = nbHabitants;
     }
 
-    // Getters et Setters
+    // Getters et setters
     public int getId() {
         return id;
     }
