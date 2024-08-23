@@ -1,3 +1,5 @@
+package org.example.digihello.test.config;
+
 import org.example.digihello.test.entities.Ville;
 import org.example.digihello.test.service.VilleService;
 import org.springframework.beans.factory.annotation.Autowired;
