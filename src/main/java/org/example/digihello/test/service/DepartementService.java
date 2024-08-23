@@ -64,4 +64,8 @@ public abstract class DepartementService {
 
         return departement;
     }
+
+    public List<Departement> getAllDepartements() {
+        return null;
+    }
 }

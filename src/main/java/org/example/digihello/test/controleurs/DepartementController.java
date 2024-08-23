@@ -5,7 +5,9 @@ import org.example.digihello.test.entities.Departement;
 import org.example.digihello.test.entities.Ville;
 import org.example.digihello.test.service.DepartementService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -78,5 +80,28 @@ public class DepartementController {
 
         List<Ville> villes = departementService.getVillesByPopulationRange(code, min, max);
         return new ResponseEntity<>(villes, HttpStatus.OK);
+    }
+
+    // fontion export CSV
+    @GetMapping("/export-departements")
+    public ResponseEntity<String> exportDepartementsToCSV() {
+        List<Departement> departements = departementService.getAllDepartements();
+
+        StringBuilder csvData = new StringBuilder();
+        csvData.append("Code Département,Nom du Département\n");
+
+        for (Departement departement : departements) {
+            csvData.append(departement.getCode())
+                    .append(",")
+                    .append(departement.getNom())
+                    .append("\n");
+        }
+
+        String filename = "departements.csv";
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
+                .contentType(MediaType.TEXT_PLAIN)
+                .body(csvData.toString());
     }
 }
