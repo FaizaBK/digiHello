@@ -34,4 +34,8 @@ public class Departement {
 
     public Set<Ville> getVilles() { return villes; }
     public void setVilles(Set<Ville> villes) { this.villes = villes; }
+
+    public Departement orElseGet(Object o) {
+        return null;
+    }
 }

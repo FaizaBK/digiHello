@@ -6,7 +6,9 @@ import org.example.digihello.test.repositories.DepartementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
+
 
 @Service
 public abstract class DepartementService {
@@ -46,4 +48,20 @@ public abstract class DepartementService {
     public abstract List<Ville> getTopNByDepartement(String code, int n);
 
     public abstract List<Ville> getVillesByPopulationRange(String code, int min, int max);
+
+
+    public Departement findOrCreateDepartement(String code, String nom) {
+        // Recherche du département par son code
+        Departement departement = departementRepository.findByCode(code);
+
+        // Si le département n'existe pas, créez-le et enregistrez-le
+        if (departement == null) {
+            departement = new Departement();
+            departement.setCode(code);
+            departement.setNom(nom);
+            departement = departementRepository.save(departement);
+        }
+
+        return departement;
+    }
 }
