@@ -1,6 +1,4 @@
-package org.example.digihello.test.config;
-
-import org.example.digihello.test.model.Ville;
+import org.example.digihello.test.entities.Ville;
 import org.example.digihello.test.service.VilleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +13,7 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Vérifiez si la base de données est vide avant d'ajouter des données
-        if (villeService.extractVilles().isEmpty()) {
+        if (villeService.getAllVilles().isEmpty()) {
             // Initialisation des données
             Ville ville1 = new Ville();
             ville1.setNom("Toulouse");
