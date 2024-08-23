@@ -3,8 +3,10 @@ package org.example.digihello.test.service;
 import org.example.digihello.test.entities.Departement;
 import org.example.digihello.test.entities.Ville;
 import org.example.digihello.test.repositories.DepartementRepository;
-import org.example.digihello.test.repositories.VilleRepository;
+
+import org.example.digihello.test.repositories.IVilleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +18,7 @@ public class DepartementServiceImpl extends DepartementService {
     private DepartementRepository departementRepository;
 
     @Autowired
-    private VilleRepository villeRepository;
+    private IVilleRepository villeRepository;
 
     @Override
     public Departement createDepartement(Departement departement) {
@@ -48,7 +50,7 @@ public class DepartementServiceImpl extends DepartementService {
 
     @Override
     public List<Ville> getTopNByDepartement(String code, int n) {
-        return villeRepository.findTopNByCodeDepartementOrderByNbHabitantsDesc(code, n);
+        return villeRepository.findTopNByCodeDepartementOrderByNbHabitantsDesc(code, Pageable.ofSize(n));
     }
 
     @Override
