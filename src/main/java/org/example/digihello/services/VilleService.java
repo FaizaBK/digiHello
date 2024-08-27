@@ -1,13 +1,11 @@
-package org.example.digihello.test.service;
+package org.example.digihello.services;
 
-import org.example.digihello.test.dto.VilleDto;
-import org.example.digihello.test.entities.Ville;
-import org.example.digihello.test.repositories.IVilleRepository;
+import org.example.digihello.entities.Ville;
+import org.example.digihello.repositories.IVilleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
 public class VilleService {

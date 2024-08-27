@@ -1,9 +1,9 @@
-package org.example.digihello.test.controleurs;
+package org.example.digihello.controllers;
 
-import org.example.digihello.test.dto.DepartementDto;
-import org.example.digihello.test.entities.Departement;
-import org.example.digihello.test.entities.Ville;
-import org.example.digihello.test.service.DepartementService;
+import org.example.digihello.dto.DepartementDto;
+import org.example.digihello.entities.Departement;
+import org.example.digihello.entities.Ville;
+import org.example.digihello.services.DepartementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

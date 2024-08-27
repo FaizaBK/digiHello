@@ -1,4 +1,4 @@
-package org.example.digihello.test.component;
+package org.example.digihello.components;
 
 @org.springframework.stereotype.Component
 public class Component {

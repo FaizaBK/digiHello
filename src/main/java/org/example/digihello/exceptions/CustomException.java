@@ -1,4 +1,4 @@
-package org.example.digihello.test.exceptions;
+package org.example.digihello.exceptions;
 
 public class CustomException extends Exception {
 

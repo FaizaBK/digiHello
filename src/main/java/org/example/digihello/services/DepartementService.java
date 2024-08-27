@@ -1,8 +1,8 @@
-package org.example.digihello.test.service;
+package org.example.digihello.services;
 
-import org.example.digihello.test.entities.Departement;
-import org.example.digihello.test.entities.Ville;
-import org.example.digihello.test.repositories.DepartementRepository;
+import org.example.digihello.entities.Departement;
+import org.example.digihello.entities.Ville;
+import org.example.digihello.repositories.DepartementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

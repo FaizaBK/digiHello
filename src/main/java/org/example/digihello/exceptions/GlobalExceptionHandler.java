@@ -1,6 +1,6 @@
-package org.example.digihello.test.exceptions;
+package org.example.digihello.exceptions;
 
-import org.example.digihello.test.service.DepartementValidationException;
+import org.example.digihello.services.DepartementValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

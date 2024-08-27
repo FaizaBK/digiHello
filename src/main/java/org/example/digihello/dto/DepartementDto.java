@@ -1,4 +1,4 @@
-package org.example.digihello.test.dto;
+package org.example.digihello.dto;
 
 public class DepartementDto {
     private String code;

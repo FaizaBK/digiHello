@@ -1,11 +1,10 @@
-package org.example.digihello.test.controleurs;
+package org.example.digihello.controllers;
 
-import org.example.digihello.test.dto.VilleDto;
-import org.example.digihello.test.entities.Departement;
-import org.example.digihello.test.entities.Ville;
-import org.example.digihello.test.exceptions.VilleValidationException;
-import org.example.digihello.test.service.DepartementService;
-import org.example.digihello.test.service.VilleService;
+import org.example.digihello.dto.VilleDto;
+import org.example.digihello.entities.Ville;
+import org.example.digihello.exceptions.VilleValidationException;
+import org.example.digihello.services.DepartementService;
+import org.example.digihello.services.VilleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -13,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
-import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/villes")

@@ -1,4 +1,4 @@
-package org.example.digihello.test.service;
+package org.example.digihello.services;
 
 public class DepartementValidationException extends Throwable {
     public DepartementValidationException(String message) {

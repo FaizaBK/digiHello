@@ -1,6 +1,6 @@
-package org.example.digihello.test.repositories;
+package org.example.digihello.repositories;
 
-import org.example.digihello.test.entities.Departement;
+import org.example.digihello.entities.Departement;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DepartementRepository extends JpaRepository<Departement, Long> {

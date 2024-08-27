@@ -1,9 +1,9 @@
-package org.example.digihello.test.config;
+package org.example.digihello.configurations;
 
-import org.example.digihello.test.entities.Departement;
-import org.example.digihello.test.service.DepartementService;
-import org.example.digihello.test.entities.Ville;
-import org.example.digihello.test.service.VilleService;
+import org.example.digihello.entities.Departement;
+import org.example.digihello.services.DepartementService;
+import org.example.digihello.entities.Ville;
+import org.example.digihello.services.VilleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

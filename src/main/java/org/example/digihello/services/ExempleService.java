@@ -1,6 +1,6 @@
-package org.example.digihello.test.service;
+package org.example.digihello.services;
 
-import org.example.digihello.test.exceptions.CustomException;
+import org.example.digihello.exceptions.CustomException;
 import org.springframework.stereotype.Service;
 
 @Service

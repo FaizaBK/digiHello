@@ -1,4 +1,4 @@
-package org.example.digihello.test.entities;
+package org.example.digihello.entities;
 
 
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package org.example.digihello.test.config;
+package org.example.digihello.configurations;
 
 import org.springframework.context.annotation.Configuration;
  @Configuration
